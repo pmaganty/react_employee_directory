@@ -8,10 +8,25 @@
 
 th {
     border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+th:hover {
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 table {
     margin-top: 50px;
     border-spacing: 0px;
-    border: 1px solid #b9b5b5;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#searchBox {
+    margin: 10px;
+}
+
+#searchDiv {
+    margin: 50px;
 }

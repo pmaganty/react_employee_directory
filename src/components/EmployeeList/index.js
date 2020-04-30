@@ -7,11 +7,29 @@ function EmployeeList() {
 
     const [employeeArr, setEmployeeArr] = useState(employees);
 
-    const filterEmployees = value => {
+    const filterEmployees = (value, search) => {
         const filteredArr = [];
         for (let i = 0; i < employees.length; i++) {
-            if (employees[i].name.last.toLowerCase().startsWith(value.toLowerCase())) {
-                filteredArr.push(employees[i]);
+            if (search === "First Name") {
+                if (employees[i].name.first.toLowerCase().startsWith(value.toLowerCase())) {
+                    filteredArr.push(employees[i]);
+                }
+            } else if (search === "Email") {
+                if (employees[i].email.toLowerCase().startsWith(value.toLowerCase())) {
+                    filteredArr.push(employees[i]);
+                }
+            } else if (search === "Country") {
+                if (employees[i].location.country.toLowerCase().startsWith(value.toLowerCase())) {
+                    filteredArr.push(employees[i]);
+                }
+            } else if (search === "State") {
+                if (employees[i].location.state.toLowerCase().startsWith(value.toLowerCase())) {
+                    filteredArr.push(employees[i]);
+                }
+            } else {
+                if (employees[i].name.last.toLowerCase().startsWith(value.toLowerCase())) {
+                    filteredArr.push(employees[i]);
+                }               
             }
         }
         return filteredArr;
@@ -35,13 +53,25 @@ function EmployeeList() {
 
     return (
     <div>
-        <div>
+        <div id="searchDiv">
             <form>
-                <label>Search By Last Name:</label>
-                <input 
-                type="text"
-                onChange={e => setEmployeeArr(filterEmployees(e.target.value))}
-                />
+                <label>Search By:  
+                    <select id="searchBox">
+                        <option>Last Name</option>
+                        <option>First Name</option>
+                        <option>Email</option>
+                        <option>Country</option>
+                        <option>State</option>
+                    </select>
+                </label>
+                <br/>
+                <div id="searchText">
+                    <p>Please enter search term:</p>
+                    <input 
+                    type="text"
+                    onChange={e => setEmployeeArr(filterEmployees(e.target.value, document.getElementById("searchBox").value))}
+                    />
+                </div>
             </form>
         </div>
 
