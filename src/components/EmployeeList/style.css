@@ -1,0 +1,17 @@
+.sortButton {
+    padding: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+table {
+    margin-top: 50px;
+    border-spacing: 0px;
+    border: 1px solid #b9b5b5;
+}
