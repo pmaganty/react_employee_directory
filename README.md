@@ -5,8 +5,8 @@
 ### Heroku Link: https://rocky-cove-89265.herokuapp.com/
 
 #### Preliminary to-do:
-+ Enter "npm i" to grab all dependency libraries
-+ Enter "npm start" and localhost:3000 will open with application
++ Enter `npm i` to grab all dependency libraries
++ Enter `npm start` and localhost:3000 will open with application
 
 #### Features:
 + Table contents: List of employees shows employee picture, last name, first name, email, country and state
