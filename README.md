@@ -1,4 +1,19 @@
-# react_employee_directory
+## Project: React Employee Directory
+## Author: Pranitha Maganty
+### Description: Application that populates employee info to browser and allows for easy sort and search
+### Github Repo Link: https://github.com/pmaganty/react_employee_directory
+### Heroku Link: https://rocky-cove-89265.herokuapp.com/
+
+#### Preliminary to-do:
++ Enter "npm i" to grab all dependency libraries
++ Enter "npm start" and localhost:3000 will open with application
+
+#### Features:
++ Table contents: List of employees shows employee picture, last name, first name, email, country and state
++ How to sort: click on column header
++ How to filter: choose filter option form dropdown and type search term in the input box
+
+### Create-React-App documentation below
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
